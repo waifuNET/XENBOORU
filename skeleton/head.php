@@ -14,6 +14,8 @@
     <script src="./js/jquery.min-1.8.3.js" type="text/javascript"></script>
     <script src="./js/jquery.lazyload.min.js" type="text/javascript"></script>
 
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc1eRkcAAAAALnAcT6rv6xBkLrkvDSPe6QgeDTK"></script>
+
     <?php
     if(!$local){
       ?>

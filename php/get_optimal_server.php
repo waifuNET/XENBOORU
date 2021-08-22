@@ -24,7 +24,7 @@ if($counter < 0 || $counter > count($_SERVERS)){
 	$force_check = true;
 }
 
-if((($total_posts % 5 == 0) && $servers_check_last_count != $total_posts) || $force_check){
+if((($total_posts % 100 == 0) && $servers_check_last_count != $total_posts) || $force_check){
 	for($i = 0; $i < count($_SERVERS); $i++){
 		$space = intval(file_get_contents($_SERVERS[$counter] . "diskinfo.php?disk=free"));
 		if($space <= 0){

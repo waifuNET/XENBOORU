@@ -43,17 +43,27 @@
         <textarea class="form-control" name="copyright" placeholder="kantai_collection" style="height: 40px;" maxlength="535" aria-label="With textarea"></textarea>
       </div>
       <div style="margin-top: 10px;"></div>
-      <input type="submit" name="submit" value="Upload" onclick="uploadNewImage();">
+      <!--<input type="submit" name="submit" value="Upload" onclick="uploadNewImage();">-->
+      <button class="g-recaptcha btn btn-dark" 
+      data-sitekey="6Lc1eRkcAAAAALnAcT6rv6xBkLrkvDSPe6QgeDTK" 
+      data-callback='uploadNewImage' 
+      data-action='submit'>Upload</button>
       <p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 10 MB.</p>
+
+      <div class="reCAPTCHADIV">
+        This site is protected by reCAPTCHA and the Google
+        <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+        <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+      </div>
 
       <script>
 
-        function uploadNewImage(){
+        function uploadNewImage(token){
           if (window.FormData === undefined) {
             alert('В вашем браузере FormData не поддерживается');
             return;
           }
-          
+
           showMessage("Info", "Uploading...");
 
           var formData = new FormData();
@@ -152,6 +162,13 @@
       $count = mysqli_fetch_row($result)[0];
     }
     ?>
+    
+    <div style="text-align: center;">
+      <script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"></script> 
+      <ins class="adsbyexoclick" data-zoneid="4397562"></ins> 
+      <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
   </div>
+
+</div>
 </div>
 </div>

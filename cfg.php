@@ -4,6 +4,6 @@
 	$_UPLOAD_IMAGE_SIZE = 10;
 
 	$_SERVERS = array(
-		'http://xenbooru-server-1/',
+		'http://xenbooru-server/',
 	);
 ?>

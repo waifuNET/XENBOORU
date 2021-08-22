@@ -87,7 +87,7 @@ if($user_status == "administrator" && $row != null && $user_name == $user_login)
           }
         </script>
         <div id="edit-panel" class="edit-panel" style="">
-          <form action="./php/changeimage.php" method="post">
+          <form id="edit-panel-form" name="edit-panel-form" action="./php/changeimage.php" method="post">
             <input value="<?php echo $_GET['view']; ?>" name="viewid" style="display: none;">
 
             <div id="edit-tags" class="input-group">
@@ -122,9 +122,26 @@ if($user_status == "administrator" && $row != null && $user_name == $user_login)
      </div>
      <div style="margin-top: 10px;"></div>
 
-     <button type="submit" class="btn btn-light" style="margin-top: 10px; position: static;">confirm</button>
-   </form>
- </div>
+     <!--<button type="submit" class="btn btn-light" style="margin-top: 10px; position: static;">confirm</button>-->
+     <button class="g-recaptcha btn btn-light" 
+     data-sitekey="6Lc1eRkcAAAAALnAcT6rv6xBkLrkvDSPe6QgeDTK" 
+     data-callback='editSubmit' 
+     data-action='submit'>Submit</button>
+
+     <div class="reCAPTCHADIV">
+      <br>
+      This site is protected by reCAPTCHA and the Google
+      <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+      <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+    </div>
+  </form>
+</div>
+
+<script>
+ function editSubmit(token) {
+   document.getElementById("edit-panel-form").submit();
+ }
+</script>
 
 </div>
 
