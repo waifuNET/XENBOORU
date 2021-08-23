@@ -89,4 +89,5 @@ function Ecronirovanie($value){
     $value = htmlspecialchars(htmlspecialchars_decode($value));
     return $value;
 }
+
 ?>

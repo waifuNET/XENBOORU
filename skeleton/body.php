@@ -162,13 +162,23 @@
       $count = mysqli_fetch_row($result)[0];
     }
     ?>
-    
-    <div style="text-align: center;">
-      <script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"></script> 
-      <ins class="adsbyexoclick" data-zoneid="4397562"></ins> 
-      <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
-  </div>
+    <script>
+      if(isMobile()){
+        $(document).ready(function() {
+          $('#ads').append('<script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"><\/script> <ins class="adsbyexoclick" data-zoneid="4397588"></ins> <script>(AdProvider = window.AdProvider || []).push({"serve": {}});<\/script>');
+        });
+      }
+      else{
+        $(document).ready(function() {
+          $('#ads').append('<script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"><\/script><ins class="adsbyexoclick" data-zoneid="4397562"></ins><script>(AdProvider = window.AdProvider || []).push({"serve": {}});<\/script>');
+        });
+      }
 
-</div>
+    </script>
+    <div id="ads" style="text-align: center;">
+
+    </div>
+
+  </div>
 </div>
 </div>

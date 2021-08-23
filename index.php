@@ -5,7 +5,7 @@ require("./php/db.php");
 require("./php/session.php");
 
 require("./php/php_functions.php");
-require("./php/get_optimal_server.php")
+require("./php/get_optimal_server.php");
 
 ?>
 <!doctype html>
